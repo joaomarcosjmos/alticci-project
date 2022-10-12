@@ -46,6 +46,7 @@ docker-compose down
 npm install
 ng serve
 ```
+* URL Front-end: http://localhost:9000/
 
 
 As long as api stays running you may access the Api documentation on the following URL:
