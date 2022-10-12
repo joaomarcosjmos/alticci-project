@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  angular-docker:
+    image: joaomarcosjmos/alticci-front
+    container_name: alticci-front-container
+    build: .
+    ports:
+      - '9000:80'
+    volumes:
+      - "/app/node_modules"
+      - ".:/app"
+    networks:
+      - backend
+
+  quarkus-docker:
+    image: joaomarcosjmos/alticci-api
+    container_name: alticci-back-conatiner
+    ports:
+      - '8081:8081'
+      - '8082:8082'
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+    name: alticci_network
+
