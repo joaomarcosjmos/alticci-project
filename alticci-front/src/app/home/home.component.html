@@ -1,0 +1,20 @@
+<div class="main-div">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <h1>Alticci Calculator</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <table class="example-full-width">
+          <tr>
+            <td>
+              <label for="">Enter a number for the Alticci sequence: </label>
+              <input matInput type="number" [(ngModel)]="number" />
+            </td>
+          </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="calculateAlticci()" color="primary">Calculate</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
